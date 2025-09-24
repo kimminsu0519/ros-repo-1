@@ -50,10 +50,10 @@
 
 | 주요 단계 | 설명 | 이미지/GIF |
 | :--- | :--- | :--- |
-| **1) 도서검색 및 에스코트 요청** | ▪ 키오스크에서 검색된 책의 위치 확인 후 에스코트 요청 <br>▪ 서점지도상의 서적코너 선택하여 에스코트 요청 <br>▪ 요청된 키오스크로 로봇이동 | <p align="center"><img src="data/readme_src/escort_GUI1.png" width="45%"/> <img src="data/readme_src/escort_GUI2.png" width="45%"/></p>  |
-| **2) 고객 안내 주행** | ▪ 키오스크에서 서적코너로 안내 시작<br>▪ Nav2 기반 자율주행으로 목적지까지 이동 | <p align="center"><img src="" width="45%"/> <img src="" width="45%"/></p>  |
-| **3) 동행 확인** | ▪ 주행 중 후방 카메라로 고객이 잘 따라오는지 지속적으로 확인<br>▪ 고객이 일정 시간 이상 보이지 않으면 안내음과 함께 잠시 대기<br>▪ 고객의 장시간 이탈시 에스코트 자동종료 | <p align="center"><img src="" width="45%"/> <img src="" width="45%"/></p>  |
-| **4) 도착 및 복귀** | ▪ 목적지 도착 후 음성으로 안내 종료 알림<br>▪ 초기 대기 장소로 복귀 | <p align="center"><img src="" width="45%"/> <img src="" width="45%"/></p>  |
+| **1) 도서검색 및 에스코트 요청** | ▪ 키오스크에서 검색된 책의 위치 확인 후 에스코트 요청 <br>▪ 서점지도상의 서적코너 선택하여 에스코트 요청 <br>▪ 요청된 키오스크로 로봇이동 | <div align="center"><img src="data/readme_src/escort_GUI1.png" width="300px"/> <img src="data/readme_src/escort_GUI2.png" width="300px"/> <img src="data/readme_src/escort_gui_arrived.png" width="300px"/> <img src="data/readme_src/escort_arrived.gif" width="300px"/></div> |
+| **2) 고객 안내 주행** | ▪ 키오스크에서 서적코너로 안내 시작<br>▪ Nav2 기반 자율주행으로 목적지까지 이동 | <div align="center"><img src="data/readme_src/escort_gui_guide.png" width="300px"/> <img src="data/readme_src/escort_guide.gif" width="300px"/></div> |
+| **3) 동행 확인** | ▪ 주행 중 후방 카메라로 고객이 잘 따라오는지 지속적으로 확인<br>▪ 고객이 일정 시간 이상 보이지 않으면 안내음과 함께 잠시 대기<br>▪ 고객의 장시간 이탈시 에스코트 자동종료 | <div align="center"><img src="data/readme_src/escort_back_check1.gif" width="300px"/> <img src="data/readme_src/escort_back_check2.gif" width="300px"/></div> |
+| **4) 도착 및 복귀** | ▪ 목적지 도착 후 음성으로 안내 종료 알림<br>▪ 초기 대기 장소로 복귀 | *(이미지 삽입 위치)* |
 
 ## 🚚 Delivery (직원 도서 운반)
 
@@ -61,10 +61,11 @@
 
 | 주요 단계 | 설명 | 이미지/GIF |
 | :--- | :--- | :--- |
-| **1) 원격 호출** | ▪ 직원데스크에서 로봇호출 | *(이미지 삽입 위치)* |
-| **2) 도서 적재 및 목적지 설정** | ▪ 도착한 로봇에 운반할 도서 적재<br>▪ 로드셀 센서가 실시간으로 책 무게 측정하여 GUI에 표시<br>▪ 직원 GUI에서 운반할 목적지 선택 후 출발 명령 | <p align="center"><img src="data/readme_src/scale_GUI.gif" width="45%"/> <img src="data/readme_src/scale_exercise.gif" width="45%"/></p> |
-| **3) 운반 주행** | ▪ 지정된 목적지까지 자율주행하여 이동<br>▪ 직원 GUI에서 로봇의 현재 위치와 상태를 실시간 모니터링 | *(이미지 삽입 위치)* |
-| **4) 작업 완료 및 대기** | ▪ 목적지 도착 후 다음 명령을 대기하거나, 작업 종료 명령 시 대기 장소로 복귀 | *(이미지 삽입 위치)* |
+| **1) 원격 호출** | ▪ 직원데스크에서 로봇호출 | <div align="center"><img src="data/readme_src/delivery_robot_call1.png" width="300px"/> <img src="data/readme_src/delivery_robot_call2.png" width="300px"/></div> |
+| **2) 도서 적재 및 목적지 설정** | ▪ 도착한 로봇에 운반할 도서 적재<br>▪ 로드셀 센서가 실시간으로 책 무게 측정하여 GUI에 표시<br>▪ 직원 GUI에서 운반할 목적지 선택 후 출발 명령 | <div align="center"><img src="data/readme_src/scale_GUI.gif" width="300px"/> <img src="data/readme_src/scale_exercise.gif" width="300px"/></div> |
+| **3) 운반 주행** | ▪ 지정된 목적지까지 자율주행하여 이동<br>▪ 직원 GUI에서 로봇의 현재 위치와 상태를 실시간 모니터링 | <div align="center">*(이미지 삽입 위치)*</div> |
+| **4) 작업 완료 및 대기** | ▪ 목적지 도착 후 다음 명령을 대기하거나, 작업 종료 명령 시 대기 장소로 복귀 | <div align="center">*(이미지 삽입 위치)*</div> |
+
 
 ## 🤝 Assist (직원 추종 및 보조)
 
@@ -72,9 +73,9 @@
 
 | 주요 단계 | 설명 | 이미지/GIF |
 | :--- | :--- | :--- |
-| **1) 직원 인증 및 호출** | ▪ 키오스크에서 직원용 QR코드를 스캔하여 '직원용 호출' 기능 활성화<br>▪ 로봇 호출 후, 도착한 로봇의 카메라에 QR코드를 2차인증 | *(이미지 삽입 위치)* |
-| **2) 추종 모드 활성화** | ▪ 인증 완료 시 전방의 직원을 타겟으로 지정<br>▪ 사람 추적(Person Tracking) 알고리즘을 통해 팔로우 모드 시작 | *(이미지 삽입 위치)* |
-| **3) 음성 및 제스처 제어** | ▪ "따라와", "잠깐만" 등 음성 명령으로 로봇 제어<br>▪ 음성으로 '핸드 제스처 모드'로 전환 가능<br>▪ MediaPipe 기반 손동작 인식(전진, 후진, 정지, 회전)으로 정밀 제어 | *(이미지 삽입 위치)* |
+| **1) 직원 인증 및 호출** | ▪ 키오스크에서 직원용 QR코드를 스캔하여 '직원용 호출' 기능 활성화<br>▪ 로봇 호출 후, 도착한 로봇의 카메라에 QR코드를 2차인증 | <div align="center"><img src="data/readme_src/assist_QR1.png" width="300px"/> <img src="data/readme_src/assist_QR2.png" width="300px"/></div> |
+| **2) 추종 모드 활성화** | ▪ 인증 완료 시 전방의 직원을 타겟으로 지정<br>▪ 사람 추적(Person Tracking) 알고리즘을 통해 팔로우 모드 시작 | <div align="center"><img src="data/readme_src/assist_QR1.gif" width="300px"/> <img src="data/readme_src/assist_QR2.gif" width="300px"/></div> |
+| **3) 음성 및 제스처 제어** | ▪ "따라와", "잠깐만" 등 음성 명령으로 로봇 제어<br>▪ 음성으로 '핸드 제스처 모드'로 전환 가능<br>▪ MediaPipe 기반 손동작 인식(전진, 후진, 정지, 회전)으로 정밀 제어 | <div align="center"><img src="data/readme_src/assist_follow.gif" width="300px"/> <img src="data/readme_src/assist_voice_control.gif" width="300px"/> <img src="data/readme_src/assist_gesture_control1.gif" width="300px"/> <img src="data/readme_src/assist_gesture_control2.gif" width="300px"/></div> |
 | **4) 작업 종료 및 복귀** | ▪ 직원이 음성으로 작업 종료를 명령하면 팔로우 모드를 해제 및 대기 장소로 복귀 | *(이미지 삽입 위치)* |
 
 ---
