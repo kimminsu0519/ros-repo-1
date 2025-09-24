@@ -61,11 +61,10 @@
 
 | 주요 단계 | 설명 | 이미지/GIF |
 | :--- | :--- | :--- |
-| **1) 원격 호출** | ▪ 직원데스크에서 로봇호출 | <div align="center"><img src="data/readme_src/delivery_robot_call1.png" width="300px"/> <img src="data/readme_src/delivery_robot_call2.png" width="300px"/></div> |
-| **2) 도서 적재 및 목적지 설정** | ▪ 도착한 로봇에 운반할 도서 적재<br>▪ 로드셀 센서가 실시간으로 책 무게 측정하여 GUI에 표시<br>▪ 직원 GUI에서 운반할 목적지 선택 후 출발 명령 | <div align="center"><img src="data/readme_src/scale_GUI.gif" width="300px"/> <img src="data/readme_src/scale_exercise.gif" width="300px"/></div> |
-| **3) 운반 주행** | ▪ 지정된 목적지까지 자율주행하여 이동<br>▪ 직원 GUI에서 로봇의 현재 위치와 상태를 실시간 모니터링 | <div align="center">*(이미지 삽입 위치)*</div> |
-| **4) 작업 완료 및 대기** | ▪ 목적지 도착 후 다음 명령을 대기하거나, 작업 종료 명령 시 대기 장소로 복귀 | <div align="center">*(이미지 삽입 위치)*</div> |
-
+| **1) 원격 호출** | ▪ 직원데스크에서 로봇호출 |  <p align="center"><img src="https://github.com/user-attachments/assets/1223eeef-de9c-468e-a395-368a4b554f54" width="45%"/> <img src="https://github.com/user-attachments/assets/9aecc2e6-70bb-41f6-bebe-2ce62aaec61b" width="30%"/></p> |
+| **2) 도서 적재 및 목적지 설정** | ▪ 도착한 로봇에 운반할 도서 적재<br>▪ 로드셀 센서가 실시간으로 책 무게 측정하여 GUI에 표시<br>▪ 직원 GUI에서 운반할 목적지 선택 후 출발 명령 | <p align="center"><img src="data/readme_src/scale_GUI.gif" width="45%"/> <img src="data/readme_src/scale_exercise.gif" width="45%"/></p> |
+| **3) 운반 주행** | ▪ 지정된 목적지까지 자율주행하여 이동<br>▪ 직원 GUI에서 로봇의 현재 위치와 상태를 실시간 모니터링 |  <p align="center"> <img src="https://github.com/user-attachments/assets/2728812e-7e07-4137-8405-907031c88501" width="45%"/> <img src="https://github.com/user-attachments/assets/352e0b66-fb7a-4a04-a6e4-ffad180dce08" width="45%"/> </p> |
+| **4) 작업 완료 및 대기** | ▪ 목적지 도착 후 다음 명령을 대기하거나, 작업 종료 명령 시 대기 장소로 복귀 | *(이미지 삽입 위치)* |
 
 ## 🤝 Assist (직원 추종 및 보조)
 
