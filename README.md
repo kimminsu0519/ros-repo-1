@@ -48,12 +48,59 @@
 
 고객이 키오스크에서 찾고 싶은 책을 검색하면, LIBO가 해당 책이 있는 위치까지 안전하게 안내합니다.
 
-| 주요 단계 | 설명 | 이미지/GIF |
-| :--- | :--- | :--- |
-| **1) 도서검색 및 에스코트 요청** | ▪ 키오스크에서 검색된 책의 위치 확인 후 에스코트 요청 <br>▪ 서점지도상의 서적코너 선택하여 에스코트 요청 <br>▪ 요청된 키오스크로 로봇이동 | <div align="center"><img src="data/readme_src/escort_GUI1.png" width="300px"/> <img src="data/readme_src/escort_GUI2.png" width="300px"/> <img src="data/readme_src/escort_gui_arrived.png" width="300px"/> <img src="data/readme_src/escort_arrived.gif" width="300px"/></div> |
-| **2) 고객 안내 주행** | ▪ 키오스크에서 서적코너로 안내 시작<br>▪ Nav2 기반 자율주행으로 목적지까지 이동 | <div align="center"><img src="data/readme_src/escort_gui_guide.png" width="300px"/> <img src="data/readme_src/escort_guide.gif" width="300px"/></div> |
-| **3) 동행 확인** | ▪ 주행 중 후방 카메라로 고객이 잘 따라오는지 지속적으로 확인<br>▪ 고객이 일정 시간 이상 보이지 않으면 안내음과 함께 잠시 대기<br>▪ 고객의 장시간 이탈시 에스코트 자동종료 | <div align="center"><img src="data/readme_src/escort_back_check1.gif" width="300px"/> <img src="data/readme_src/escort_back_check2.gif" width="300px"/></div> |
-| **4) 도착 및 복귀** | ▪ 목적지 도착 후 음성으로 안내 종료 알림<br>▪ 초기 대기 장소로 복귀 | *(이미지 삽입 위치)* |
+<table>
+  <tr>
+    <th style="width:15%">주요 단계</th>
+    <th style="width:50%">설명</th>
+    <th style="width:35%">이미지/GIF</th>
+  </tr>
+  <tr>
+    <td><b>1) 도서검색 및 에스코트 요청</b></td>
+    <td>
+      ▪ 키오스크에서 검색된 책의 위치 확인 후 에스코트 요청 <br>
+      ▪ 서점지도상의 서적코너 선택하여 에스코트 요청 <br>
+      ▪ 요청된 키오스크로 로봇이동
+    </td>
+    <td align="center">
+      <img src="data/readme_src/escort_GUI1.png" width="48%"/>
+      <img src="data/readme_src/escort_GUI2.png" width="48%"/><br>
+      <img src="data/readme_src/escort_gui_arrived.png" width="48%"/>
+      <img src="data/readme_src/escort_arrived.gif" width="48%"/>
+    </td>
+  </tr>
+  <tr>
+    <td><b>2) 고객 안내 주행</b></td>
+    <td>
+      ▪ 키오스크에서 서적코너로 안내 시작<br>
+      ▪ Nav2 기반 자율주행으로 목적지까지 이동
+    </td>
+    <td align="center">
+      <img src="data/readme_src/escort_gui_guide.png" width="48%"/>
+      <img src="data/readme_src/escort_guide.gif" width="48%"/>
+    </td>
+  </tr>
+  <tr>
+    <td><b>3) 동행 확인</b></td>
+    <td>
+      ▪ 주행 중 후방 카메라로 고객이 잘 따라오는지 지속적으로 확인<br>
+      ▪ 고객이 일정 시간 이상 보이지 않으면 안내음과 함께 잠시 대기<br>
+      ▪ 고객의 장시간 이탈시 에스코트 자동종료
+    </td>
+    <td align="center">
+      <img src="data/readme_src/escort_back_check1.gif" width="48%"/>
+      <img src="data/readme_src/escort_back_check2.gif" width="48%"/>
+    </td>
+  </tr>
+  <tr>
+    <td><b>4) 도착 및 복귀</b></td>
+    <td>
+      ▪ 목적지 도착 후 음성으로 안내 종료 알림<br>
+      ▪ 초기 대기 장소로 복귀
+    </td>
+    <td align="center">*(이미지 삽입 위치)*</td>
+  </tr>
+</table>
+
 
 ## 🚚 Delivery (직원 도서 운반)
 
@@ -113,8 +160,8 @@
 ## 🚗 경로 탐색 및 자율 주행  
 | 주요 요소 | 설명 | 이미지/도식 |
 | :--- | :--- | :--- |
-| **웨이포인트 기반 경로 계획** | ▪ Nav2 기본 플래너를 활용하여 맵 주요 지점을 웨이포인트 그래프 구성<br>▪ A* 알고리즘을 사용해 가장 안정적이고 예측 가능한 경로 생성 | *(이미지 삽입 위치)* |
-| **장애물 회피 및 경로 재계획** | ▪ 주행 중 장애물 탐지 및 회피<br>▪ 경로가 차단될 경우 현재 위치 기반으로 새로운 최적 경로를 재계산 및 주행 재개 | *(이미지 삽입 위치)* |
+| **웨이포인트 기반 경로 계획** | ▪ Nav2 기본 플래너를 활용하여 맵 주요 지점을 웨이포인트 그래프 구성<br>▪ A* 알고리즘을 사용해 가장 안정적이고 예측 가능한 경로 생성 | <div align="center"><img src="data/readme_src/core_technologies_waypoint1.gif" width="300px"/> <img src="data/readme_src/core_technologies_waypoint2.gif" width="300px"/> <img src="data/readme_src/core_technologies_custom_navigator1.png" width="300px"/> <img src="data/readme_src/core_technologies_custom_navigator2.png" width="300px"/></div> |
+| **장애물 회피 및 경로 재계획** | ▪ 주행 중 장애물 탐지 및 회피<br>▪ 경로가 차단될 경우 현재 위치 기반으로 새로운 최적 경로를 재계산 및 주행 재개 | <div align="center"><img src="data/readme_src/core_technologies_rerouting1.gif" width="300px"/> <img src="data/readme_src/core_technologies_rerouting2.gif" width="300px"/></div> |
 
 ---
 
@@ -130,16 +177,15 @@
 | 주요 요소 | 설명 | 이미지/도식 |
 | :--- | :--- | :--- |
 | **Wake Word 감지** | ▪ Porcupine 기반 "헤이 리보" 호출어 인식 | *(이미지 삽입 위치)* |
-| **STT → LLM → TTS 파이프라인** | ▪ Google STT: 음성 → 텍스트 변환<br>▪ OpenAI LLM: 맥락 분석 및 답변 생성<br>▪ Google TTS: 텍스트 → 음성 변환 | *(흐름도 이미지 삽입 위치)* |
+| **STT → LLM → TTS 파이프라인** | ▪ Google STT: 음성 → 텍스트 변환<br>▪ OpenAI LLM: 맥락 분석 및 답변 생성<br>▪ Google TTS: 텍스트 → 음성 변환 | <div align="center"><img src="data/readme_src/core_technologies_voice.png" width="300px"/> <img src="data/readme_src/core_technologies_voice.gif" width="300px"/></div> |
 
 ---
 
 ## ✋ MediaPipe 기반 핸드 제스처 제어  
 | 주요 요소 | 설명 | 이미지/도식 |
 | :--- | :--- | :--- |
-| **손 랜드마크 인식** | ▪ MediaPipe로 손의 21개 주요 랜드마크 좌표 추출 | *(이미지 삽입 위치)* |
-| **제스처 분류 및 제어** | ▪ 손가락의 펴짐/굽힘, 방향 등을 분석<br>▪ 전진, 후진, 정지, 회전 등 로봇 제어 명령으로 변환 | *(제스처 예시 이미지 삽입 위치)* |
-
+| **손 랜드마크 인식** | ▪ MediaPipe로 손의 21개 주요 랜드마크 좌표 추출 | <div align="center"><img src="data/readme_src/core_technologies_handgesture.png" width="300px"/></div> |
+| **제스처 분류 및 제어** | ▪ 손가락의 펴짐/굽힘, 방향 등을 분석<br>▪ 전진, 후진, 정지, 회전 등 로봇 제어 명령으로 변환 | <div align="center"><img src="data/readme_src/core_technologies_handgesture.gif" width="300px"/></div> |
 
 ---
 
