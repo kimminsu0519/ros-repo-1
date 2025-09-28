@@ -124,43 +124,20 @@
 | **3) 음성 및 제스처 제어** | ▪ "따라와", "잠깐만" 등 음성 명령으로 로봇 제어<br>▪ 음성으로 '핸드 제스처 모드'로 전환 가능<br>▪ MediaPipe 기반 손동작 인식(전진, 후진, 정지, 회전)으로 정밀 제어 | <div align="center"><img src="data/readme_src/assist_follow.gif" width="300px"/> <img src="data/readme_src/assist_voice_control.gif" width="300px"/> <img src="data/readme_src/assist_gesture_control1.gif" width="300px"/> <img src="data/readme_src/assist_gesture_control2.gif" width="300px"/></div> |
 | **4) 작업 종료 및 복귀** | ▪ 직원이 음성으로 작업 종료를 명령하면 팔로우 모드를 해제 및 대기 장소로 복귀 | *(이미지 삽입 위치)* |
 
----
+## 🔔 로봇 상태 시각화 알림
 
-<!-- # 3. 핵심 기술
+| 항목 | 예시 이미지 |
+| :--- | :---: |
+| **표정(페이스) 변화**<br>• 임무 상태(대기/작업/완료) 및 배터리 상태에 따라 표정 전환<br>• GUI와 동기화해 현재 표정을 표시 | <div align="center"><img src="data/readme_src/liboFace_charge.gif" width="300px"/><br/><img src="data/readme_src/liboFace_listening.gif" width="300px"/></div> |
+| **LED 상태등**<br>• 대기: 파랑 <br>• 임무 수행: 초록 <br>• 경고/에러: 빨강 <br>• 구현: ROS2 토픽(`/robot/state` 또는 `/led_strip_color`) 퍼블리시로 제어 | <div align="center">LED 동작 예시<br/><img src="data/readme_src/co-tool_image.PNG" width="300px" alt="LED 예시"/></div> |
 
-### 1) 경로 탐색 및 자율 주행
-- **웨이포인트 기반 경로 계획**
-  - Nav2의 기본 플래너가 장애물에 근접한 경로를 생성하는 문제를 해결하기 위해, 맵의 주요 지점을 웨이포인트로 지정하여 그래프를 구성했습니다.
-  - **A\*** 알고리즘을 사용하여 출발지와 목적지 사이의 웨이포인트를 탐색, 가장 안정적이고 예측 가능한 경로를 생성하여 주행합니다.
-- **장애물 회피 및 경로 재계획**
-  - 주행 중 전방의 정적/동적 장애물을 인식하여 회피 기동을 수행합니다.
-  - 만약 경로가 완전히 차단될 경우, 현재 위치를 기반으로 새로운 최적 경로를 재계산하여 주행을 재개합니다.
 
-### 2) 사람 추적 및 Re-ID
-- **YOLOv5 & StrongSORT 파이프라인**
-  - YOLOv5를 통해 영상 내의 '사람'을 실시간으로 탐지합니다.
-  - StrongSORT 알고리즘이 탐지된 각 사람에게 고유 ID를 부여하고, 외형적 특징(feature vector)을 비교하여 동일 인물을 지속적으로 추적합니다.
-- **재식별(Re-Identification)**
-  - 추적하던 대상이 잠시 가려지거나 프레임 밖으로 나갔다 다시 나타나도, 저장된 외형 특징과의 유사도 비교를 통해 동일 인물임을 재확인하고 추적을 유지합니다.
-
-### 3) 음성인식 및 LLM 기반 상호작용
-- **Wake Word → STT → LLM → TTS**
-  - Porcupine 기반의 Wake Word("헤이 리보") 감지로 상호작용을 시작합니다.
-  - Google STT API를 통해 사용자 음성을 텍스트로 변환합니다.
-  - OpenAI의 LLM이 텍스트의 맥락과 의도를 분석하여 가장 적절한 답변을 생성합니다.
-  - Google Cloud TTS API를 통해 생성된 텍스트 답변을 자연스러운 음성으로 출력합니다.
-
-### 4) MediaPipe 기반 핸드 제스처 제어
-- **손 랜드마크 인식**
-  - MediaPipe 프레임워크를 활용하여 실시간으로 손의 21개 주요 랜드마크 좌표를 추출합니다.
-- **제스처 분류**
-  - 각 랜드마크의 상대적 위치, 손가락의 펴짐 여부, 손목의 방향 등을 계산하여 '전진(Go)', '후진(Back)', '정지(Stop)', '좌/우 회전' 등의 제스처로 분류하고, 이를 로봇 제어 명령으로 변환합니다. -->
   # 3. 핵심 기술  
 
 ## 🚗 경로 탐색 및 자율 주행  
 | 주요 요소 | 설명 | 이미지/도식 |
 | :--- | :--- | :--- |
-| **웨이포인트 기반 경로 계획** | ▪ Nav2 기본 플래너를 활용하여 맵 주요 지점을 웨이포인트 그래프 구성<br>▪ A* 알고리즘을 사용해 가장 안정적이고 예측 가능한 경로 생성 | <div align="center"><img src="data/readme_src/core_technologies_waypoint1.gif" width="300px"/> <img src="data/readme_src/core_technologies_waypoint2.gif" width="300px"/> <img src="data/readme_src/core_technologies_custom_navigator1.png" width="300px"/> <img src="data/readme_src/core_technologies_custom_navigator2.png" width="300px"/></div> |
+| **웨이포인트 기반 경로 계획** | ▪ Nav2 기본 플래너를 활용하여 맵 주요 지점을 웨이포인트 그래프 구성<br>▪ A* 알고리즘을 사용해 가장 안정적이고 예측 가능한 경로 생성 | <div align="center"><img src="data/readme_src/core_technologies_waypoint2.gif" width="300px"/> <img src="data/readme_src/core_technologies_custom_navigator2.png" width="300px"/></div> |
 | **장애물 회피 및 경로 재계획** | ▪ 주행 중 장애물 탐지 및 회피<br>▪ 경로가 차단될 경우 현재 위치 기반으로 새로운 최적 경로를 재계산 및 주행 재개 | <div align="center"><img src="data/readme_src/core_technologies_rerouting1.gif" width="300px"/> <img src="data/readme_src/core_technologies_rerouting2.gif" width="300px"/></div> |
 
 ---
@@ -168,8 +145,8 @@
 ## 👤 사람 추적 및 Re-ID  
 | 주요 요소 | 설명 | 이미지/도식 |
 | :--- | :--- | :--- |
-| **YOLOv5 + StrongSORT** | ▪ YOLOv5로 영상 내 사람을 실시간 탐지<br>▪ StrongSORT가 각 사람에 ID 부여 및 연속 추적 수행 | *(이미지 삽입 위치)* |
-| **재식별(Re-ID)** | ▪ 대상이 잠시 가려져도 외형 특징 벡터 기반 유사도 비교<br>▪ 동일 인물로 재식별하여 추적 안정성 확보 | *(이미지 삽입 위치)* |
+| **YOLOv5 + StrongSORT** | ▪ YOLOv5로 영상 내 사람을 실시간 탐지<br>▪ StrongSORT가 각 사람에 ID 부여 및 연속 추적 수행 | <img src="data/readme_src/deepsort_target_maintain.gif" width="300px"/> |
+| **재식별(Re-ID)** | ▪ 대상이 잠시 가려져도 외형 특징 벡터 기반 유사도 비교<br>▪ 동일 인물로 재식별하여 추적 안정성 확보 | <img src="data/readme_src/deepsort_target_reacquire.gif" width="300px"/>|
 
 ---
 
